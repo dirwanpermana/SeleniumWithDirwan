@@ -67,8 +67,6 @@ public class Checkout {
             //     .getText().equals(targetProduct))
             //     .findFirst()
             //     .orElseThrow(() -> new RuntimeException("Produk tidak ditemukan: " + targetProduct));
-
-            // // Scroll dan klik "Add to Cart"
             // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", matchingProduct);
             // matchingProduct.findElement(By.tagName("button")).click();
 
@@ -78,9 +76,9 @@ public class Checkout {
             WebElement cartItem = driver.findElement(By.className("inventory_item_name"));
             Assert.assertEquals(cartItem.getText(), targetProduct, "Produk di keranjang tidak sesuai!");
             System.out.println("Item di keranjang sesuai : "+ targetProduct);
+            driver.findElement(By.id("checkout")).click();
             
             // Isi form checkout
-            driver.findElement(By.id("checkout")).click();
             driver.findElement(By.id("first-name")).sendKeys("Dirwan");
             driver.findElement(By.id("last-name")).sendKeys("Stev");
             driver.findElement(By.id("postal-code")).sendKeys("A12345");
