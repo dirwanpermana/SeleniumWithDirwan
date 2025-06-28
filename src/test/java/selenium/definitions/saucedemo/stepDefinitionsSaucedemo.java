@@ -46,11 +46,6 @@ public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
         assert homepage.getHomePageText().equals("Swag Labs") : "Homepage belum sesuai ni cuy!";
     }
 
-    // @When("^Pembeli menambahkan barang (.+)$ ke keranjang")
-    // public void tambahKeranjang(String productName) throws InterruptedException{
-    //     homepage.addToCart(productName);
-    //     homepage.clickOnCart();
-    // }
     @When("Pembeli menambahkan barang ke keranjang")
     public void tambahKeranjang() throws InterruptedException{
         String productName = "Sauce Labs Fleece Jacket";
