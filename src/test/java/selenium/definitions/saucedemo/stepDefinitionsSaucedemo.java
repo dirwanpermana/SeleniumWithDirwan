@@ -53,7 +53,7 @@ public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
     @When("Pembeli menambahkan barang ke keranjang")
     public void tambahKeranjang() throws InterruptedException{
         String productName = "Sauce Labs Fleece Jacket";
-        System.out.println("Pada Halaman Homepage, menambahkan produk ke keranjang");
+        System.out.println("    Pada Halaman Homepage, menambahkan produk ke keranjang");
         homepage.addToCart(productName);
         homepage.clickOnCart();
     }
