@@ -15,6 +15,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
+    // inisiasi page objects
     Logincuy logincuy;
     Homepage homepage;
     KeranjangPage keranjangPage;
