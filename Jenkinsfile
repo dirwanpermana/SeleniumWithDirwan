@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Clone Source') {
             steps {
-                git 'https://github.com/dirwanpermana/SeleniumWithDirwan.git'
+                // git 'https://github.com/dirwanpermana/SeleniumWithDirwan.git'
+                git branch: 'main', url: 'https://github.com/dirwanpermana/SeleniumWithDirwan.git'
+
             }
         }
 
@@ -29,27 +31,3 @@ pipeline {
         }
     }
 }
-
-// pipeline {
-//     agent any
-
-//     stages {
-//         stage('Checkout') {
-//             steps {
-//                 git 'https://github.com/dirwanpermana/SeleniumWithDirwan.git'
-//             }
-//         }
-
-//         stage('Test') {
-//             steps {
-//                 bat 'mvn clean test'
-//             }
-//         }
-//     }
-
-//     post {
-//         always {
-//             junit '**/target/surefire-reports/*.xml'
-//         }
-//     }
-// }
