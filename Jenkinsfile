@@ -9,7 +9,6 @@
 //     stages {
 //         stage('Clone Source') {
 //             steps {
-//                 // git 'https://github.com/dirwanpermana/SeleniumWithDirwan.git'
 //                 git branch: 'main', url: 'https://github.com/dirwanpermana/SeleniumWithDirwan.git'
 
 //             }
