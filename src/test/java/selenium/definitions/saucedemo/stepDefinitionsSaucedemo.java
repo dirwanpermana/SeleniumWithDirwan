@@ -90,7 +90,7 @@ public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
     
     @After
     public void tearDownCucumber() {
-        super.tearDown(); // Ini akan close browser setelah scenario selesai
+        super.tearDown();
     }
 
 }
