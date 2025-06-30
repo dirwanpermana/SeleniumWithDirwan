@@ -32,6 +32,7 @@
 //     }
 // }
 
+/* Jenkins dengan notifikasi Telegram */
 
 pipeline {
     agent any
