@@ -10,10 +10,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features/saucedemo",
     glue = "selenium/definitions/saucedemo",
-    plugin = {"pretty",                                   // Pretty console output
-                "html:target/cucumber-report.html",          // HTML report
-                "json:target/cucumber-report.json",          // JSON report
-                "junit:target/cucumber-report.xml"           // JUnit XML report
+    plugin = {"pretty",                                   
+                "html:target/cucumber-report.html",          
+                "json:target/cucumber-report.json",          
+                "junit:target/cucumber-report.xml"          
             }
 )
 

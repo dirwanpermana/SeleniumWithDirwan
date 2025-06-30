@@ -64,14 +64,14 @@ pipeline {
     post {
         success {
             script {
-                def message = URLEncoder.encode("✅ Build SUCCESS 🎉\nJob: ${env.JOB_NAME}\nBuild #: ${env.BUILD_NUMBER}\nURL: ${env.BUILD_URL}", "UTF-8")
+                def message = URLEncoder.encode("Testing lu aman bro, sikatt!! \nJob: ${env.JOB_NAME}\nBuild #: ${env.BUILD_NUMBER}\nURL: ${env.BUILD_URL}", "UTF-8")
                 sh "curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d chat_id=${TELEGRAM_CHAT_ID} -d text=${message}"
                 echo 'Build success cuyy!'
             }
         }
         failure {
             script {
-                def message = URLEncoder.encode("❌ Build FAILED 🚨\nJob: ${env.JOB_NAME}\nBuild #: ${env.BUILD_NUMBER}\nURL: ${env.BUILD_URL}", "UTF-8")
+                def message = URLEncoder.encode("Testing FAILED Cuy, Benerin Lagi \nJob: ${env.JOB_NAME}\nBuild #: ${env.BUILD_NUMBER}\nURL: ${env.BUILD_URL}", "UTF-8")
                 sh "curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d chat_id=${TELEGRAM_CHAT_ID} -d text=${message}"
                 echo 'Build failed.'
             }
