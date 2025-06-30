@@ -82,7 +82,7 @@ public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
     public void submitOrder() throws InterruptedException {
         checkoutOverview.overviewMantap();
         assert checkoutDone.getConfirmationMessage().equals("Thank you for your order!") : "Order tidak berhasil!"; 
-        System.out.println("Pesan konfirmasi order yang sesuai : " + checkoutDone.getConfirmationMessage());
+        System.out.println("Pesan konfirmasi order : " + checkoutDone.getConfirmationMessage());
         Thread.sleep(3000);
 
         checkoutDone.backToHome();
