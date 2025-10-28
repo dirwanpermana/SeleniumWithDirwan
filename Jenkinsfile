@@ -21,6 +21,13 @@ pipeline {
         stage('Run Tests') {
             steps {
                 bat 'mvn clean test'
+                // bat 'mvn clean test -DsuiteXmlFile=selenium.xml'
+            }
+        }
+        stage('Publish Report') {
+            steps {
+                junit 'target/surefire-reports/*.xml'
+                cucumber buildStatus: 'UNSTABLE', fileIncludePattern: '**/cucumber-reports/*.json'
             }
         }
     }

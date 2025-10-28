@@ -1,10 +1,10 @@
 package selenium.definitions.saucedemo;
 
 import com.demo.pageobjects.saucedemo.Logincuy;
-import com.demo.base.BaseTestSauceDemo;
-import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
-import org.testng.Assert;
+import org.junit.Assert;
+import io.cucumber.java.en.*;
+import com.demo.base.BaseTestSauceDemo;
 
 public class LoginStepDefinitions extends BaseTestSauceDemo {
 
@@ -27,16 +27,16 @@ public class LoginStepDefinitions extends BaseTestSauceDemo {
     @Then("pengguna berhasil masuk ke halaman utama")
     public void pengguna_berhasil_masuk_ke_halaman_utama() {
         String homeTitle = driver.findElement(By.className("app_logo")).getText();
-        Assert.assertEquals(homeTitle, "Swag Labs", "User gagal login padahal kredensial valid!");
+        Assert.assertEquals("Swag Labs", homeTitle);
         System.out.println("Login Berhasil - Halaman: " + homeTitle);
-        tearDown();
     }
 
     @Then("sistem menampilkan pesan error login")
     public void sistem_menampilkan_pesan_error_login() {
         boolean errorTampil = driver.findElement(By.cssSelector(".error-message-container")).isDisplayed();
-        Assert.assertTrue(errorTampil, "Tidak ada pesan error yang muncul!");
+        Assert.assertTrue("Tidak ada pesan error yang muncul!", errorTampil);
         System.out.println("Pesan error login tampil.");
         tearDown();
+
     }
 }
