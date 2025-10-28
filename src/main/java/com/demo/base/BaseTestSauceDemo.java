@@ -14,7 +14,7 @@ public class BaseTestSauceDemo {
         profileDir.mkdirs();
 
         EdgeOptions options = new EdgeOptions();
-        options.addArguments("--headless=new");  //headless mode nihs
+        options.addArguments("--headless=new");  //headless mode
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--user-data-dir=" + uniqueProfile);
