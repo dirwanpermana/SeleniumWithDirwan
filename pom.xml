@@ -15,7 +15,7 @@
     </properties>
 
     <dependencies>
-        <!-- ✅ Selenium dependencies -->
+        <!-- Selenium dependencies -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -27,7 +27,7 @@
             <version>5.8.0</version>
         </dependency>
 
-        <!-- ✅ Cucumber (JUnit) -->
+        <!-- Cucumber (JUnit) -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -47,14 +47,14 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- ✅ Environment management -->
+        <!--  Environment management -->
         <dependency>
             <groupId>io.github.cdimascio</groupId>
             <artifactId>dotenv-java</artifactId>
             <version>3.0.0</version>
         </dependency>
 
-        <!-- ✅ (Opsional) API testing tools -->
+        <!--API testing tools -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -76,7 +76,7 @@
 
     <build>
         <plugins>
-            <!-- ✅ Surefire: untuk menjalankan JUnit dan Cucumber -->
+            <!-- Surefire: untuk menjalankan JUnit dan Cucumber -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
