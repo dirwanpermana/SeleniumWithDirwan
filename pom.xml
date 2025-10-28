@@ -91,7 +91,6 @@
                     <configuration>
                         <forkCount>0</forkCount>
                         <suiteXmlFiles>
-                            <!-- <suiteXmlFile>src/test/resources/testng_simple_suite.xml</suiteXmlFile> -->
                             <suiteXmlFile>src/test/resources/selenium.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
