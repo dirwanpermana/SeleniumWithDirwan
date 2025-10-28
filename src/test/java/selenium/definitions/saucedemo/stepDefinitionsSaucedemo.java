@@ -38,7 +38,6 @@ public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
     @When ("User menginput email {string} dan password {string}")
     public void userLogin(String email, String password) {
         logincuy.loginApplication(email, password);
-        assert homepage.getHomePageText().equals("Swag Labs") : "Homepage belum sesuai ni cuy!";
     }
 
     @Then("User redirect ke halaman home")
@@ -49,7 +48,7 @@ public class stepDefinitionsSaucedemo extends BaseTestSauceDemo {
     @When("Pembeli menambahkan barang ke keranjang")
     public void tambahKeranjang() throws InterruptedException{
         String productName = "Sauce Labs Fleece Jacket";
-        System.out.println("    Pada Halaman Homepage, menambahkan produk ke keranjang");
+        System.out.println("Pada Halaman Homepage, menambahkan produk ke keranjang");
         homepage.addToCart(productName);
         homepage.clickOnCart();
     }

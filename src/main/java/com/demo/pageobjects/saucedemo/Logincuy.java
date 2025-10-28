@@ -5,13 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.demo.abstractcomponents.AbstractSauceDemo;
 
 public class Logincuy extends AbstractSauceDemo {
     WebDriver driver;
 
-    // Constructor untuk inisialisasi elemen dengan PageFactory
     public Logincuy(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -25,14 +23,10 @@ public class Logincuy extends AbstractSauceDemo {
     @FindBy(id = "login-button")
     private WebElement loginButton;
 
-    // Locator untuk pesan error email dan password
     By emailErrorMessage = By.xpath("//input[@id='userEmail']/following-sibling::div//div[@class='ng-star-inserted']");
     By passwordErrorMessage = By.xpath("//input[@id='userPassword']/following-sibling::div//div[@class='ng-star-inserted']");
 
-    // Method untuk melakukan login
     public void loginApplication(String email, String password) {
-        // Menggunakan null check untuk menghindari NullPointerException
-        // Jika email atau password null, gunakan string kosong
         userName.sendKeys(null == email ? "" : email);
         passwordField.sendKeys(null == password ? "" : password);
         loginButton.click();

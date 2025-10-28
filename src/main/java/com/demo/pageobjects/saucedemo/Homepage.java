@@ -1,13 +1,11 @@
 package com.demo.pageobjects.saucedemo;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.demo.abstractcomponents.AbstractSauceDemo;
 
 public class Homepage extends AbstractSauceDemo {
@@ -43,18 +41,12 @@ public class Homepage extends AbstractSauceDemo {
     }
 
     public void addToCart(String productName) throws InterruptedException {
-        // Implement the logic to add a product to the cart
-        // This method can be used to interact with the dashboard page
-        // For example, finding the product by name and clicking on the add to cart button
         System.out.println("Adding " + productName + " to cart.");
-
-        // Add your implementation here
         visibilityOfElementLocated(listOfProducts);
         getProductByName(productName).findElement(addToCartButton).click();
         Thread.sleep(2000);
     }
 
-        //Klik button keranjang
     public void clickOnCart() {
         cartButton.click();
     }
